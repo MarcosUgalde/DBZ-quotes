@@ -14,6 +14,11 @@ const seedQuotes = [
     quote: "Creía que eso de casarse tenía que ver con comida",
   },
   { author: "Vegeta", quote: "Me pregunto si los androides sentís terror" },
+  {
+    author: "Piccolo",
+    quote:
+      "No tiene sentido decirte una mentira que te consuele, así que te diré la verdad",
+  },
 ];
 
 Quote.insertMany(seedQuotes)
