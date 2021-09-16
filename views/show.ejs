@@ -9,5 +9,8 @@
 <body>
     <h1> <%= quote.quote %> </h1>
     <h2> <%= quote.author %> </h2>
+    <form action="/quotes/<%= quote._id %>?_method=DELETE" method="POST">
+        <button>Delete!</button>
+    </form>
 </body>
 </html>

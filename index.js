@@ -30,6 +30,12 @@ app.get("/quotes/:id", async (req, res) => {
   res.render("show", { quote });
 });
 
+app.delete("/quotes/:id", async (req, res) => {
+  const { id } = req.params;
+  await Quote.findByIdAndDelete(id);
+  res.redirect("/quotes");
+});
+
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
 });
