@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a new quote</h1>
+    <form action="/quotes" method="POST">
+        <label for="author">Author:</label> <br>
+        <input type="text" id="author" name="author" > <br>
+        <label for="quote">Quote:</label> <br>
+        <textarea name="quote" id="quote" cols="30" rows="10"></textarea> <br>
+        <button>Add quote!</button>
+    </form> <br>
+    <a href="/quotes">Back to quotes</a>
+</body>
+</html>

@@ -24,6 +24,16 @@ app.get("/quotes", async (req, res) => {
   res.render("index", { quotes });
 });
 
+app.post("/quotes", async (req, res) => {
+  const newQuote = await new Quote(req.body);
+  await newQuote.save();
+  res.redirect("/quotes");
+});
+
+app.get("/quotes/new", (req, res) => {
+  res.render("new");
+});
+
 app.get("/quotes/:id", async (req, res) => {
   const { id } = req.params;
   const quote = await Quote.findById(id);
