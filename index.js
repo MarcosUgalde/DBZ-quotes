@@ -40,6 +40,21 @@ app.get("/quotes/:id", async (req, res) => {
   res.render("show", { quote });
 });
 
+app.get("/quotes/:id/edit", async (req, res) => {
+  const { id } = req.params;
+  const quote = await Quote.findById(id);
+  res.render("edit", { quote });
+});
+
+app.patch("/quotes/:id", async (req, res) => {
+  const { id } = req.params;
+  await Quote.findByIdAndUpdate(id, req.body, {
+    runValidators: true,
+    new: true,
+  });
+  res.redirect("/quotes");
+});
+
 app.delete("/quotes/:id", async (req, res) => {
   const { id } = req.params;
   await Quote.findByIdAndDelete(id);
