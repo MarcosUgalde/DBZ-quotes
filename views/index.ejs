@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+
     <title>Quotes</title>
 </head>
 <body>
-    <h1>Quotes</h1>
-    <ul>
-        <% for (let quote of quotes) { %>
-            <li>
-                <%= quote.quote %> - 
-                <b><%= quote.author %> </b>
-                <a href="/quotes/<%= quote.id %>">Show quote</a>
-                <a href="/quotes/<%= quote.id %>/edit">Edit quote</a>
-            </li> 
-            <% } %> 
-    </ul>
+    <div id="top-bar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dragonball_%284-Star%29.svg/525px-Dragonball_%284-Star%29.svg.png" alt="4 star Dragon ball">
+        <h1>DBZ QUOTES</h1>
+    </div>
+
+    <h2>Quotes</h2>
+    <div class="quotes-container">
+        <ul>
+            <% for (let quote of quotes) { %>
+                <li>
+                    <%= quote.quote %> - 
+                    <b><%= quote.author %> </b>
+                    <a href="/quotes/<%= quote.id %>">Show quote</a>
+                </li> 
+                <% } %> 
+        </ul>
+    </div>
     <a href="/quotes/new">New quote</a>
 </body>
 </html>

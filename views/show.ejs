@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
     <title>Quote</title>
 </head>
 <body>
-    <h1> <%= quote.quote %> </h1>
-    <h2> <%= quote.author %> </h2>
+    <div id="top-bar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dragonball_%284-Star%29.svg/525px-Dragonball_%284-Star%29.svg.png" alt="4 star Dragon ball">
+        <h1>DBZ QUOTES</h1>
+    </div>
+    <div class="quotes-container">
+        <h1> <%= quote.quote %> </h1>
+        <h2> <%= quote.author %> </h2>
+        <a href="/quotes/<%= quote._id %>/edit">Edit quote</a>
+    </div>
     <form action="/quotes/<%= quote._id %>?_method=DELETE" method="POST">
         <button>Delete!</button>
     </form>
     <a href="/quotes">Back to quotes</a>
-    <a href="/quotes/<%= quote._id %>/edit">Edit quote</a>
 </body>
 </html>

@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Add a new quote</h1>
-    <form action="/quotes" method="POST">
+    <div id="top-bar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dragonball_%284-Star%29.svg/525px-Dragonball_%284-Star%29.svg.png" alt="4 star Dragon ball">
+        <h1>DBZ QUOTES</h1>
+    </div>
+    <h2>Add a new quote</h2>
+    <form action="/quotes" method="POST" class="quotes-container">
         <label for="author">Author:</label> <br>
         <input type="text" id="author" name="author" > <br>
         <label for="quote">Quote:</label> <br>
