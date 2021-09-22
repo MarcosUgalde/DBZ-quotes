@@ -10,6 +10,7 @@ To install all the dependencies
 ## Running the app
 
 - Run your MongoDB server.
+- Seed the database with the seeds.js file.
 - nodemon index.js to load the app in your localhost.
 
 ![](dbzAppDemo.gif)
